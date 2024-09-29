@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Transactions Dashboard</h1>
+
+        <label for="month">Select Month:</label>
+        <select id="month">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March" selected>March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+        <label for="search">Search Transactions:</label>
+        <input type="text" id="search" placeholder="Search by title, description, price">
+
+        <table id="transactionsTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Date of Sale</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button id="prev">Previous</button>
+            <span id="pageIndicator">Page 1</span>
+            <button id="next">Next</button>
+        </div>
+
+        <div class="statistics">
+            <div id="totalSales">Total Sale Amount: $0</div>
+            <div id="soldItems">Sold Items: 0</div>
+            <div id="notSoldItems">Not Sold Items: 0</div>
+        </div>
+        <canvas id="barChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
